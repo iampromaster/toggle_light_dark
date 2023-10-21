@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  color: #333;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #ddd;
+}
+
+h1 {
+  margin: 40px;
+}
+p {
+  margin: 10px 0;
+  line-height: 25px;
+  text-align: justify;
+  padding: 40px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+.toggle-btn {
+  position: relative;
+  width: 140px;
+  height: 60px;
+  background: url(./light.png) no-repeat center;
+  background-size: cover;
+  border-radius: 30px;
+  border: none;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+
+.dark-mode .toggle-btn {
+  background: url(./dark.png) no-repeat center;
+  background-size: cover;
+}
+
+.circle {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+  top: 8px;
+  left: 90px;
+  transition: 0.4s linear;
+}
+
+.dark-mode .circle {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.circle::before,
+.circle::after {
+  content: "";
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  animation: waves 1s linear infinite;
+}
+
+.dark-mode .circle::before,
+.dark-mode .circle::after {
+  border: 1px solid #333;
+}
+
+.circle::after {
+  animation-delay: .5s;
+}
+
+@keyframes waves {
+  to {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+}
+
+
+.toggle-btn i {
+  font-size: 22px;
+  line-height: 44px;
+  transition: 0.5s linear;
+}
+
+.dark-mode .toggle-btn i {
+  transform: rotate(360deg);
+}
+
+.fa-sun {
+  color: #d4ac0d;
+}
+.fa-moon {
+  color: #eaf2f8;
+}

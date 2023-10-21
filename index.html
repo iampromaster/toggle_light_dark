@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <h1>Dark/Light Mode</h1>
+  <button class="toggle-btn">
+    <span class="circle"><i class="icon fas fa-sun"></i></span>
+  </button>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, praesentium quo? Assumenda, nulla ipsam accusamus id cumque quod nam eligendi iure minima! Placeat magnam eveniet facere modi voluptatibus dignissimos id expedita ipsam consequatur obcaecati temporibus, nihil provident ad repellendus distinctio doloremque fugit accusantium quis hic nostrum numquam. Nisi amet error perferendis dolorum quam voluptates est necessitatibus rem animi, vitae earum voluptatum provident tempora enim incidunt ullam aspernatur! Tenetur, sapiente fugit tempore autem cum libero incidunt esse accusamus labore laboriosam, perspiciatis dolorem, explicabo dignissimos neque dolorum mollitia eum expedita amet est vel quia vitae fugiat. Quas ipsam recusandae, voluptatibus consequuntur blanditiis nemo iusto delectus labore ut aut porro animi quia quam asperiores repellat atque sapiente mollitia hic eius! Possimus, vitae? Sint animi officiis perferendis assumenda vel voluptates natus expedita recusandae accusamus aliquid quisquam eius, veniam quas rem beatae pariatur doloribus? Reiciendis provident saepe dignissimos quam vero, ipsum doloremque iure maxime quisquam, quibusdam maiores veritatis dolor. Quibusdam ex aspernatur laboriosam at facilis obcaecati sit quia similique autem quisquam repellendus quam ducimus eveniet esse, consequuntur soluta deserunt vel quis corrupti maiores rerum? Reprehenderit labore iste officia maxime corrupti nobis eum, deleniti qui iusto, repellendus, culpa odio itaque totam ratione explicabo doloribus quis? Odio quia nam corporis? Corrupti, impedit? Modi soluta odit, numquam earum sunt asperiores commodi officia nostrum aspernatur. Doloremque quae et deleniti repudiandae. Debitis beatae repellat fugit odit aperiam deserunt consequatur ea, facilis cum maiores corporis esse repellendus iste? Numquam, sunt? Ex modi delectus pariatur voluptatum mollitia temporibus veritatis blanditiis quas consequatur?</p>
+
+<script>
+  document.querySelector(".toggle-btn").
+  addEventListener("click",()=>{
+    document.body.classList.toggle("dark-mode")
+    if(document.body.classList.contains("dark-mode")){
+      document.querySelector(".icon").classList.remove("fa-sun");
+      document.querySelector(".icon").classList.add("fa-moon");
+    }else{
+       document.querySelector(".icon").classList.remove("fa-moon");
+        document.querySelector(".icon").classList.add("fa-sun");
+    }
+  })
+</script>
+
+</body>
+</html>
